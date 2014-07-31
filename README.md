@@ -1,4 +1,4 @@
-jquery.advancedScroll
+jquery.advancedBreak
 =====================
 
 Creates new event for *window* called **break** and returns this resolution index starting from biggest to smaller.
@@ -29,4 +29,4 @@ break: function(event, index) { console.log(index); /* do something else */ }
 });
 ```
 
-Please check [jquery.advancedScrol](https://github.com/luizgamabh/jquery.advancedScroll)
+Please check [jquery.advancedScroll](https://github.com/luizgamabh/jquery.advancedScroll)
