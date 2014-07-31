@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste</title>
+	<style>
+		html, body {
+			height: 200%;
+		}
+		div#result {
+			display: block;
+			background-color: #ebebeb;
+			position: fixed;
+			top: 10px;
+			left: 50%;
+			margin-left: -150px;
+			width: 300px;
+			text-align: center;
+			font: normal normal normal 18px/24px Arial, Helvetica, sans-serif;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div id="result"><p>Redimensionar página para simular quebras e obter resultado.</p></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery.advancedBreak.js"></script>
+	<script>
+	var result = $("#result");
+	var breaks = $(window).advancedBreak([320,480,768]);
+	$(window).on({
+		load: function() {
+			result.append("<p>Inicialmente você está posicionado na quebra de índice "+breaks.getIndex()+"</p>");
+		},
+		break: function(event, index) {
+			result.html("<p>Atualmente você está posicionado na quebra de índice "+index+"</p>");
+		}
+	});
+	// or: $(window).advancedBreak().on({...});
+	</script>
+</body>
+</html>
