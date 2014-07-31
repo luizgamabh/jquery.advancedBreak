@@ -3,11 +3,11 @@ jquery.advancedBreak
 
 Creates new event for *window* called **break** and returns this resolution index starting from biggest to smaller.
 
-Before 1st break (biggest resolution): index 0
-Betweeen 1st and 2nd breaks: index 1
-Betweeen 2nd and 3th breaks: index 2
-Between **m**th and **n**th resolutins: index **m**
-After **n**th break (smallest resolution): index **n**
+- Before 1st break (biggest resolution): index 0
+- Betweeen 1st and 2nd breaks: index 1
+- Betweeen 2nd and 3th breaks: index 2
+- Between **m**th and **n**th resolutins: index **m**
+- After **n**th break (smallest resolution): index **n**
 
 ## Instalation
 
