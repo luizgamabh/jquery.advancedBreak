@@ -24,15 +24,18 @@
         return this.each(function() {
             var _this = this,
                 $this = $(_this);
-            if (_this.self != window.self) return; // Allows only window to use this plugin
-            actualBreak = lastBreak = getBreakIndex(_this, breaks);
-            $this.resize(function() {
-                actualBreak = getBreakIndex(_this, breaks);
-                if (actualBreak != lastBreak) {
-                    lastBreak = actualBreak;
-                    $this.trigger("break", [lastBreak]);
-                }
-            });
+            if (!_this.instantiated) {
+                this.instantiated = true;
+                if (_this.self != window.self) return; // Allows only window to use this plugin
+                actualBreak = lastBreak = getBreakIndex(_this, breaks);
+                $this.resize(function() {
+                    actualBreak = getBreakIndex(_this, breaks);
+                    if (actualBreak != lastBreak) {
+                        lastBreak = actualBreak;
+                        $this.trigger("break", [lastBreak]);
+                    }
+                });
+            }
         });
     };
 })(jQuery);
