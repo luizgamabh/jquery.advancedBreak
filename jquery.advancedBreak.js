@@ -18,7 +18,7 @@
                 }
             }
         };
-        this.getIndex = function() {
+        window.getBreakIndex = function() {
             return getBreakIndex(window, breaks);
         };
         return this.each(function() {
