@@ -1,0 +1,23 @@
+{
+  "name": "jquery.advancedBreak",
+  "main": "jquery.advancedBreak.js",
+  "homepage": "https://github.com/luizgamabh/jquery.advancedBreak",
+  "authors": [
+    "Luiz Gustavo Freire Gama <luizgama@onrails.com.br>"
+  ],
+  "description": "Add break events to window object.",
+  "keywords": [
+    "jquery",
+    "break",
+    "events",
+    "trigger"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
